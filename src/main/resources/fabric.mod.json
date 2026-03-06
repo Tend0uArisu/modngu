@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "modngu",
+  "version": "${version}",
+  "name": "Modngu",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "ARR",
+  "icon": "assets/modngu/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "org.Modngu.modngu.client.ModnguDataGenerator"
+    ],
+    "client": [
+      "org.modngu.modngu.client.ModnguClient"
+    ]
+  },
+  "mixins": [
+    "modngu.mixins.json",
+    {
+      "config": "modngu.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
