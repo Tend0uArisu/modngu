@@ -11,7 +11,7 @@
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [
-      "org.Modngu.modngu.client.ModnguDataGenerator"
+      "org.modngu.modngu.client.ModnguDataGenerator"
     ],
     "client": [
       "org.modngu.modngu.client.ModnguClient"
