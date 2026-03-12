@@ -21,7 +21,7 @@ public class ModnguClient implements ClientModInitializer {
     private volatile State nextStateAfterDelay = State.IDLE;
     private long delayUntilMs = 0;
     private volatile boolean isAutoSlayerActive = false;
-    private static final long DELAY_MS = 600;
+    private static final long DELAY_MS = 2000;
 
     @Override
     public void onInitializeClient() {
@@ -56,8 +56,8 @@ public class ModnguClient implements ClientModInitializer {
             }
 
             if (clean.contains("bat dau nhiem vu slayer")) {
-                if (clean.contains("hon the")) {
-                    sendClientMsg("§a[Modngu] ĐÃ TÌM THẤY HỒN THỂ! Đang làm...");
+                if (clean.contains("[lv.800] hon the")) {
+                    sendClientMsg("§a[Modngu] ĐÃ TÌM THẤY [LV.800] HỒN THỂ! Đang làm...");
                     state = State.FOUND_HON_THE;
                 } else {
                     String[] parts = clean.split("diet");
